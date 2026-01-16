@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.14.2 on darwin)" generated="2026-01-16T17:33:20.346930" rpa="false" schemaversion="5">
+<suite id="s1" name="Test" source="/Users/pantaree.p/Documents/Automation_train/testcase/test.robot">
+<test id="s1-t1" name="TC_01 Verify value of Etherium not below 30,000" line="5">
+<kw name="Open bitazza website" owner="common">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-01-16T17:33:20.473067" level="INFO">Opening browser 'Chrome' to base url 'https://bitazza.co.th/home'.</msg>
+<arg>${bitazza_web.bitazza_url}</arg>
+<arg>${bitazza_web.web_browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-01-16T17:33:20.472719" elapsed="3.853076"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-01-16T17:33:24.326803" elapsed="0.330917"/>
+</kw>
+<status status="PASS" start="2026-01-16T17:33:20.472405" elapsed="4.185465"/>
+</kw>
+<kw name="Go to markets" owner="market_feature">
+<kw name="Click markets menu" owner="homepage_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${homepage_page.markets_menu}</arg>
+<arg>${homepage_page_text.timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-16T17:33:24.658634" elapsed="0.017767"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-01-16T17:33:24.676943" level="INFO">Clicking element 'xpath=//button[@id='dropdown-basic']//div[contains(text(), 'ตลาดซื้อขาย')]'.</msg>
+<arg>${homepage_page.markets_menu}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-16T17:33:24.676553" elapsed="0.035412"/>
+</kw>
+<status status="PASS" start="2026-01-16T17:33:24.658491" elapsed="0.053559"/>
+</kw>
+<kw name="Click markets dropdown" owner="homepage_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${homepage_page.markets_dropdown}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-16T17:33:24.712316" elapsed="0.010269"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-01-16T17:33:24.722974" level="INFO">Clicking element 'xpath=//div[contains(@class,'show dropdown')]//div[contains(@class,'HeaderNav_ItemTitle') and contains(text(), 'ตลาดซื้อขาย')]'.</msg>
+<arg>${homepage_page.markets_dropdown}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-16T17:33:24.722696" elapsed="1.828691"/>
+</kw>
+<status status="PASS" start="2026-01-16T17:33:24.712166" elapsed="1.839324"/>
+</kw>
+<kw name="Click markets header" owner="market_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${market_page.markets_header}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-16T17:33:26.551938" elapsed="0.108794"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-01-16T17:33:26.661165" level="INFO">Clicking element 'xpath=//a[@id='header_market']//div[contains(text(),'ตลาดซื้อขาย')]'.</msg>
+<arg>${market_page.markets_header}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-16T17:33:26.660864" elapsed="0.049177"/>
+</kw>
+<status status="PASS" start="2026-01-16T17:33:26.551709" elapsed="0.158610"/>
+</kw>
+<status status="PASS" start="2026-01-16T17:33:24.658171" elapsed="2.052197"/>
+</kw>
+<kw name="Check cryptocurrency coin list" owner="market_feature">
+<kw name="Set coin list" owner="market_page">
+<kw name="Create List" owner="BuiltIn">
+<msg time="2026-01-16T17:33:26.713433" level="INFO">@{CoinList} = [ xpath=//td[contains(@class,'text-white')]//div[text()='Bitcoin'] | xpath=//td[contains(@class,'text-white')]//div[text()='Ethereum'] | xpath=//td[contains(@class,'text-white')]//div[text()='Moo Deng...</msg>
+<var>@{CoinList}</var>
+<arg>${market_page.markets_bitcoin}</arg>
+<arg>${market_page.markets_ethereum}</arg>
+<arg>${market_page.markets_moodeng}</arg>
+<arg>${market_page.markets_usd}</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2026-01-16T17:33:26.712271" elapsed="0.001192"/>
+</kw>
+<return>
+<value>@{CoinList}</value>
+<status status="PASS" start="2026-01-16T17:33:26.713536" elapsed="0.000142"/>
+</return>
+<msg time="2026-01-16T17:33:26.713793" level="INFO">@{CoinList} = [ xpath=//td[contains(@class,'text-white')]//div[text()='Bitcoin'] | xpath=//td[contains(@class,'text-white')]//div[text()='Ethereum'] | xpath=//td[contains(@class,'text-white')]//div[text()='Moo Deng...</msg>
+<var>@{CoinList}</var>
+<status status="PASS" start="2026-01-16T17:33:26.711949" elapsed="0.001860"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${market_page.currency_header}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-16T17:33:26.713891" elapsed="0.431124"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${coins}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-01-16T17:33:27.145353" elapsed="0.268402"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${coins}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-16T17:33:27.413912" elapsed="0.020728"/>
+</kw>
+<var name="${coins}">xpath=//td[contains(@class,'text-white')]//div[text()='Bitcoin']</var>
+<status status="PASS" start="2026-01-16T17:33:27.145267" elapsed="0.289432"/>
+</iter>
+<iter>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${coins}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-01-16T17:33:27.435003" elapsed="0.287854"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${coins}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-16T17:33:27.723012" elapsed="0.016441"/>
+</kw>
+<var name="${coins}">xpath=//td[contains(@class,'text-white')]//div[text()='Ethereum']</var>
+<status status="PASS" start="2026-01-16T17:33:27.434813" elapsed="0.304692"/>
+</iter>
+<iter>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${coins}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-01-16T17:33:27.739666" elapsed="0.273688"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${coins}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-16T17:33:28.013545" elapsed="0.011745"/>
+</kw>
+<var name="${coins}">xpath=//td[contains(@class,'text-white')]//div[text()='Moo Deng']</var>
+<status status="PASS" start="2026-01-16T17:33:27.739590" elapsed="0.285767"/>
+</iter>
+<iter>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${coins}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-01-16T17:33:28.025578" elapsed="0.290408"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${coins}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-16T17:33:28.316658" elapsed="0.098351"/>
+</kw>
+<var name="${coins}">xpath=//td[contains(@class,'text-white')]//div[text()='USD Tether']</var>
+<status status="PASS" start="2026-01-16T17:33:28.025474" elapsed="0.389589"/>
+</iter>
+<var>${coins}</var>
+<value>@{CoinList}</value>
+<status status="PASS" start="2026-01-16T17:33:27.145119" elapsed="1.269978"/>
+</for>
+<status status="PASS" start="2026-01-16T17:33:26.711566" elapsed="1.703585"/>
+</kw>
+<kw name="Verify coin value in web should be greater than provided value" owner="market_feature">
+<kw name="Get coin value" owner="market_page">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-01-16T17:33:28.430374" level="INFO">${value} = 103,686.98 THB</msg>
+<var>${value}</var>
+<arg>${coin}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-16T17:33:28.415961" elapsed="0.014440"/>
+</kw>
+<return>
+<value>${value}</value>
+<status status="PASS" start="2026-01-16T17:33:28.430455" elapsed="0.000037"/>
+</return>
+<msg time="2026-01-16T17:33:28.430572" level="INFO">${coin_value_in_web_text} = 103,686.98 THB</msg>
+<var>${coin_value_in_web_text}</var>
+<arg>${coin}</arg>
+<status status="PASS" start="2026-01-16T17:33:28.415824" elapsed="0.014760"/>
+</kw>
+<kw name="Replace String Using Regexp" owner="String">
+<msg time="2026-01-16T17:33:28.431021" level="INFO">${coin_value_in_web} = 103686.98</msg>
+<var>${coin_value_in_web}</var>
+<arg>${coin_value_in_web_text}</arg>
+<arg>[^0-9.]</arg>
+<arg>${EMPTY}</arg>
+<doc>Replaces ``pattern`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2026-01-16T17:33:28.430662" elapsed="0.000373"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-01-16T17:33:28.431366" level="INFO">${result} = True</msg>
+<var>${result}</var>
+<arg>${coin_value_in_web} &gt; ${coin_value}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-01-16T17:33:28.431099" elapsed="0.000280"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${result}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2026-01-16T17:33:28.431444" elapsed="0.000110"/>
+</kw>
+<arg>${market_page.ethereum_value_text}</arg>
+<arg>${expected_value.ethereum_value}</arg>
+<status status="PASS" start="2026-01-16T17:33:28.415324" elapsed="0.016260"/>
+</kw>
+<status status="PASS" start="2026-01-16T17:33:20.472056" elapsed="7.959619"/>
+</test>
+<status status="PASS" start="2026-01-16T17:33:20.348017" elapsed="8.083903"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Test" id="s1" pass="1" fail="0" skip="0">Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
