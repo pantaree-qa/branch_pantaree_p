@@ -1,19 +1,17 @@
-bitazza_web:
-  bitazza_url:  "https://bitazza.co.th/home"
-  web_browser:  "Chrome"
+TC_01:
+  expected_value:
+    ethereum_value:  30000
+  coin_name:
+    coin_1:   "bitcoin" 
+    coin_2:   "ethereum"
+    coin_3:   "moodeng"
+    coin_4:   "tether"
 
-homepage_page_text:
-  market_TH:  "ตลาดซื้อขาย"
-  timeout:  "30s"
-
-market_page_text:
-  market_TH:  "ตลาดซื้อขาย"
-  cryptocurrency_TH:  "คริปโตเคอเรนซี่"
-  bitcoin_EN:  "Bitcoin"
-  ethereum_EN:  "Ethereum"
-  moodeng_EN:  "Moo Deng"
-  tether_EN:   "USD Tether"
-  thaibaht_EN:  "THB"
-
-expected_value:
-  ethereum_value:  30000
+TC_02:
+  expected_value:
+    ethereum_value:  1000000
+  coin_name:
+    coin_1:   "bitcoin" 
+    coin_2:   "ethereum"
+    coin_3:   "moodeng"
+    coin_4:   "tether"

@@ -1,8 +1,6 @@
 *** Keywords ***
 Click markets menu
-    SeleniumLibrary.Wait until element is visible   ${homepage_page.markets_menu}     ${homepage_page_text.timeout}
-    SeleniumLibrary.Click element   ${homepage_page.markets_menu}
+    common.Click when element is ready   ${homepage_page.lbl_markets}
 
 Click markets dropdown
-    SeleniumLibrary.Wait until element is visible   ${homepage_page.markets_dropdown}
-    SeleniumLibrary.Click element   ${homepage_page.markets_dropdown}
+    common.Click when element is ready   ${homepage_page.ddl_markets}

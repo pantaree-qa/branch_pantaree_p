@@ -1,0 +1,11 @@
+market_language:
+  th:
+    market:  "ตลาดซื้อขาย"
+    cryptocurrency:  "คริปโตเคอเรนซี่"
+
+  en:
+    bitcoin:  "Bitcoin"
+    ethereum:  "Ethereum"
+    moodeng:  "Moo Deng"
+    tether:   "USD Tether"
+    thaibaht:  "THB"

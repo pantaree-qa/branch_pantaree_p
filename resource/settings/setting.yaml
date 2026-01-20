@@ -1,0 +1,8 @@
+bitazza_web_uat:
+  bitazza_url:  "https://bitazza.co.th/home"
+  web_browser:  "Chrome"
+
+global:
+  timeout:  "30s"
+
+language: th
