@@ -1,10 +1,10 @@
 *** Keywords ***
 Set global timeout
-    SeleniumLibrary.Set Selenium Timeout    ${global.timeout}
+    SeleniumLibrary.Set selenium timeout    ${global.timeout}
 
 Set test language
     [Arguments]     ${test_language}
-    Set Suite Variable      ${language}     ${test_language}         
+    Set suite variable      ${language}     ${test_language}         
 
 Open bitazza website
     [Arguments]     ${bitizza_url}=${bitazza_web_uat.bitazza_url}  ${browser}=${bitazza_web_uat.web_browser}
@@ -17,4 +17,4 @@ Click when element is ready
     SeleniumLibrary.Click element   ${locator}
 
 Capture screen when test failed
-    Run Keyword If Test Failed          SeleniumLibrary.Capture Page Screenshot
+    Run keyword if test failed          SeleniumLibrary.Capture page screenshot

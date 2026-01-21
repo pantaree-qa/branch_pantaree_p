@@ -1,9 +1,9 @@
 *** Settings ***
-Resource    ${CURDIR}/../resource/import.robot
+Resource    ${CURDIR}/../keyword/import.robot
 Suite Setup          Run Keywords        common.Set global timeout
 Test Setup              common.Open bitazza website
 Test Teardown           Run Keywords        common.Capture screen when test failed
-...     SeleniumLibrary.Close Browser
+...     SeleniumLibrary.Close browser
 
 *** Test Cases ***
 TC_01 Verify value of Etherium not below 30,000

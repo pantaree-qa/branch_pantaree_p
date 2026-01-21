@@ -6,7 +6,7 @@ Set coin list
     [Arguments]     @{coins}
     @{CoinList}=     Create list
     FOR    ${coins}    IN    @{coins}
-        Collections.Append To List      ${CoinList}     ${coins}
+        Collections.Append to list      ${CoinList}     ${coins}
     END
     RETURN    @{CoinList}
 
